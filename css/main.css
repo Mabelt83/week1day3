@@ -1,0 +1,98 @@
+.container {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 10vh 40vh 1fr;
+    gap: 3vh 1vw;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "nav nav nav nav nav nav"
+    ". prof-pic prof-info prof-info prof-info ."
+    ". posts posts posts posts .";
+}
+
+@media (min-width: 992px) {
+    .container {
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 3fr 5fr 1fr;
+        grid-template-rows: 10vh 40vh 40vh 1fr;
+        gap: 3vh 1vw;
+        grid-auto-flow: row;
+        grid-template-areas:
+        "nav nav nav nav"
+        ". prof-info posts ."
+        ". prof-pic posts ."
+        " . . posts .";
+    }
+}
+
+/* .area-border {
+    border: 1px solid black;
+} */
+
+.nav {
+    grid-area: nav;
+    background-color: black;
+    position: sticky;
+    top: 0;
+}
+
+.nav-links {
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center
+}
+
+.nav-links > a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links > a:hover {
+    text-decoration: underline;
+}
+
+.prof-pic {
+    grid-area: prof-pic;
+    justify-self: center;
+    align-self: center;
+    height: 100%;
+}
+
+
+
+
+.prof-info {
+    grid-area: prof-info;
+}
+
+.info-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.posts {
+    grid-area: posts;
+}
+
+.post-card {
+    border: 1px solid black;
+    padding: 1em;
+    border-radius: 25px;
+    margin: 2vh 0;
+}
+
+.card-links {
+    display: flex;
+    justify-content: center;
+}
+
+.card-links > a {
+    color: black;
+    text-decoration: none;
+}
+
